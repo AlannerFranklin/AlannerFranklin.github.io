@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPU 学习笔记</title>
+<style>
+  body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2em 1.5em;
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #24292f;
+    background: #fff;
+  }
+  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+  .intro { color: #57606a; border-left: 4px solid #76b900; padding-left: 1em; }
+  ul.posts { list-style: none; padding: 0; }
+  ul.posts li { padding: 0.6em 0; border-bottom: 1px solid #eaeef2; }
+  ul.posts a { text-decoration: none; font-weight: 600; color: #0969da; }
+  ul.posts .date { color: #57606a; font-size: 0.9em; margin-right: 0.8em; }
+  .footer { margin-top: 2.5em; font-size: 0.85em; color: #57606a; }
+  .footer a { color: #0969da; }
+</style>
+</head>
+<body>
+<h1>GPU 学习笔记</h1>
+<p class="intro">
+  一个上位机软件工程师转 GPU 工具 / 驱动方向的学习记录。<br>
+  每篇文章都带真实性能数字、实验数据和踩坑复盘——<strong>数字是 GPU 工程师的简历</strong>。
+</p>
+
+<h2>文章</h2>
+<ul class="posts">
+{% for post in site.posts %}
+  <li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
+<div class="footer">
+  <a href="https://github.com/AlannerFranklin/GPU">学习仓库（代码与交接记录）</a> ·
+  <a href="https://github.com/AlannerFranklin">GitHub 主页</a>
+</div>
+</body>
+</html>
